@@ -111,6 +111,10 @@ void handleInput(int input)
       time_now = millis();
       phase = WATCHING;
     }
+    else if (phase == DISABLED)
+    {
+      debug("got heartbeat while disabled, ignoring\n");
+    }
   }
   else if (input == 'S')
   {
